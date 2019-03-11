@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <title>Saxons | Login</title>
+  <link rel="stylesheet" href="/assets/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="/assets/css/bootstrap.css" />
+  <link rel="stylesheet" href="/assets/css/camera.css" />
+  <link rel="stylesheet" href="/assets/css/normalize.css" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/media.css" />
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <link rel="stylesheet" href="https://cdn.muicss.com/mui-0.9.41/css/mui.min.css" />
+  <script src="https://cdn.muicss.com/mui-0.9.41/js/mui.min.js"></script>
+  <script src="/assets/js/modernizr-3.5.0.min.js"></script>
+</head>
+
+<body>
+
+  <div class="camera_wrap">
+    <div data-src="/assets/images/header2.jpeg">
+      <img src="/assets/images/header2.jpeg">
+      <div class="camera_caption">
+        <p>A jQuery slideshow with many effects, transitions, easy to customize, using canvas and mobile
+          ready, based on jQuery 1.9.1+</p>
+      </div>
+    </div>
+    <div data-src="/assets/images/header-bg.jpg">
+      <img src="/assets/images/header-bg.jpg" class="img-responsive">
+      <div class="camera_caption">
+        <p>A jQuery slideshow with many effects, transitions, easy to customize, using canvas and mobile
+          ready, based on jQuery 1.9.1+</p>
+      </div>
+    </div>
+    <div data-src="/assets/images/header1.jpeg">
+      <img src="/assets/images/header1.jpeg">
+      <div class="camera_caption">
+        <p>A jQuery slideshow with many effects, transitions, easy to customize, using canvas and mobile
+          ready, based on jQuery 1.9.1+</p>
+      </div>
+    </div>
+    <div data-src="/assets/images/header3.jpeg">
+      <img src="/assets/images/header3.jpeg">
+      <div class="camera_caption">
+        <p>A jQuery slideshow with many effects, transitions, easy to customize, using canvas and mobile
+          ready, based on jQuery 1.9.1+</p>
+      </div>
+    </div>
+  </div>
+
+  <form action="portal" method="POST" name="login-form" id="login-form" class="mui-form">
+    <legend>Login to Continue</legend>
+    <div class="mui-textfield mui-textfield--float-label">
+      <input type="email" name="login-email" />
+      <label>Email</label>
+    </div>
+    <div class="mui-textfield mui-textfield--float-label">
+      <input type="password" name="login-password" />
+      <label>Password</label>
+    </div>
+    <button type="submit" class="mui-btn mui-btn--raised mui-btn--dark">Login</button>
+  </form>
+
+  <script>
+    var loginForm = document.forms['login-form'];
+
+    loginForm.addEventListener('submit', validateLoginForm);
+
+    function validateLoginForm(e) {
+      if (this['login-email'].value === '') {
+        alert('Please! Enter your email');
+        e.preventDefault();
+      } else if (this['login-password'].value === '') {
+        alert('Please! Enter your password');
+        e.preventDefault();
+      } else { }
+    }
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/assets/js/jquery-3.2.1.min.js"><\/script>')</script>
+  <script src="/assets/js/easing.min.js"></script>
+  <script src="/assets/js/camera.min.js"></script>
+  <script src="/assets/js/bootstrap.min.js"></script>
+  <script src="/assets/js/plugins.js"></script>
+  <script>
+    window.ga = function () {
+      ga.q.push(arguments)
+    };
+    ga.q = [];
+    ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto');
+    ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
+</html>
