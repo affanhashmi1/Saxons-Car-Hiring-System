@@ -17,7 +17,7 @@ router.get('/portal', function(req, res, next) {
 });
 
 /* POST portal page. */
-router.get('/portal', function(req, res, next) {
+router.post('/portal', function(req, res, next) {
   res.render('customers/portal', { title: 'Saxons | Portal' });
 });
 

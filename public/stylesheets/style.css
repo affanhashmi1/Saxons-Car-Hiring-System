@@ -1,3 +1,7 @@
+body {
+  font-family: 'Lato', sans-serif;
+}
+
 #login-form {
   position: absolute;
   top: 50%;
@@ -9,4 +13,48 @@
   text-align: center;
   border-radius: 5px;
   box-shadow: 0 2px 8px 0 #000000;
+  transition: 0.5s ease-in-out;
+}
+
+#login-form:hover {
+  top: 49%;
+  box-shadow: 0 2px 8px 0 #000000, 0 8px 20px 0 #000000;  
+}
+
+nav {
+  background: #5e35b1;
+}
+
+.bg-theme {
+  background: #5e35b1;
+  color: #fff;
+}
+
+.text-theme {
+  color: #5e35b1;
+}
+
+.btn-theme {
+  background: #5e35b1;
+  color: #fff;
+}
+
+.btn-theme:hover {
+  background: #512da8;
+  color: #fff;
+}
+
+.btn-theme:active {
+  background: #4527a0;
+}
+
+.btn-outline-theme {
+  border: 1px #5e35b1 solid;
+  border-radius: 5px;
+  color: #5e35b1;
+}
+
+.btn-outline-theme:hover {
+  background: #5e35b1;
+  color: #fff;
 }
