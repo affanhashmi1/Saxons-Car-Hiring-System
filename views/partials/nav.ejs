@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark shadow">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
   <div class="container">
     <a class="navbar-brand" href="/">Saxons</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
@@ -8,37 +8,82 @@
 
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="/">Home</a>
+        <li class="nav-item active">
+          <a class="nav-link" href="">Home</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdown" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">Vehicle</a>
-          <div class="dropdown-menu" aria-labelledby="dropdown">
-            <a class="dropdown-item" href="#">Vehicle Owner</a>
-            <a class="dropdown-item" href="#">Vehicle Type</a>
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown-settings" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Settings</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown-settings">
+            <a class="dropdown-header">SETTINGS</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/customers/portal/generalSettings">General Settings</a>
+            <a class="dropdown-item" href="/customers/portal/companySettings">Company Settings</a>
+            <a class="dropdown-item" href="/customers/portal/communicationSettings">Communication Settings</a>
           </div>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdown" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">Drivers</a>
-          <div class="dropdown-menu" aria-labelledby="dropdown">
-            <a class="dropdown-item" href="#">Drivers</a>
-            <a class="dropdown-item" href="#">Drivers List</a>
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown-settings" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Vehicles</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown-settings">
+            <a class="dropdown-header">VEHICLE OWNER</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="javascript:popitup('/customers/portal/createVehicleOwner')">Create</a>
+            <a class="dropdown-item" href="/customers/portal/readVehicleOwner">Read</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-header">VEHICLE TYPE</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Create</a>
+            <a class="dropdown-item" href="#">Read</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-header">VEHICLE</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Create</a>
+            <a class="dropdown-item" href="#">Read</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown-settings" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Drivers</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown-settings">
+            <a class="dropdown-header">DRIVER</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Create</a>
+            <a class="dropdown-item" href="#">Read</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-header">DRIVER SESSION</a>
+            <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Drivers Session List</a>
           </div>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdown" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">Settings</a>
-          <div class="dropdown-menu" aria-labelledby="dropdown">
-            <a class="dropdown-item" href="#">General Settings</a>
-            <a class="dropdown-item" href="#">Company Settings</a>
-            <a class="dropdown-item" href="#">Communication Settings</a>
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown-settings" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Employees</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown-settings">
+            <a class="dropdown-header">SHIFT</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Create</a>
+            <a class="dropdown-item" href="#">Read</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown-settings" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Customers</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown-settings">
+            <a class="dropdown-header">CUSTOMER</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Create</a>
+            <a class="dropdown-item" href="#">Read</a>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="javascript:logout()">Logout</a>
+          <a class="nav-link" href="#">Change Role</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="logout()">Logout</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-toggle="modal" data-target=".help-modal">Help</a>
         </li>
       </ul>
     </div>

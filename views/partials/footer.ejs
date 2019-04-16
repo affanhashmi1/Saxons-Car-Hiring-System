@@ -1,13 +1,40 @@
-  <footer class="text-center">
-    <div class="container">
-      <p class="m-0">Copyrights reserved &copy; <%= new Date().getFullYear() %>, Saxons</p>
-    </div>
-  </footer>
+<footer class="text-center">
+  <div class="container">
+    <p class="m-0">Copyrights reserved &copy; <%= new Date().getFullYear() %>, Saxons</p>
+  </div>
+</footer>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src="/javascripts/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="/javascripts/main.js"></script>
+<script src="/javascripts/mousetrap.min.js"></script>
+<script>
+  Mousetrap.bind('/', function (e) {
+    $('.help-modal').modal('show');
+  });
+  Mousetrap.bind('alt+a', function (e) {
+    window.open('/customers/portal/generalSettings', '_parent');
+  });
+  Mousetrap.bind('alt+b', function (e) {
+    window.open('/customers/portal/companySettings', '_parent');
+  });
+  Mousetrap.bind('alt+c', function (e) {
+    window.open('/customers/portal/communicationSettings', '_parent');
+  });
+  Mousetrap.bind('alt+d', function (e) {
+    popitup('/customers/portal/createVehicleOwner');
+  });
+  Mousetrap.bind('alt+e', function (e) {
+    window.open('/customers/portal/listVehicleOwner', '_parent');
+  });
+  Mousetrap.bind('alt+f', function (e) {
+    popitup('/customers/portal/createVehicleType');
+  });
+  Mousetrap.bind('alt+g', function (e) {
+    window.open('/customers/portal/listVehicleType', '_parent');
+  });
+</script>
 </body>
 
 </html>

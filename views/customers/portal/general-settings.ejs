@@ -1,0 +1,260 @@
+<% include ../../partials/header.ejs %>
+<% include ../../partials/nav.ejs %>
+<% include ../../partials/help.ejs %>
+
+<!-- NEW SECTION -->
+
+<section class="my-5">
+  <div class="container">
+    <h3>General Settings</h3>
+    <hr />
+    <div class="row">
+      <div class="col-md-6">
+        <!-- FIELDS -->
+        <div class="form-group">
+          <label>Drivers Expiry Notice</label>
+          <input type="text" name="general-settings-drivers-expiry-notice" id="general-settings-drivers-expiry-notice"
+            class="form-control form-control-sm" placeholder="in days" />
+        </div>
+
+        <div class="form-group">
+          <label>Booking Expiry Notice</label>
+          <input type="text" name="general-settings-booking-expiry-notice" id="general-settings-booking-expiry-notice"
+            class="form-control form-control-sm" placeholder="in mins" />
+        </div>
+
+        <div class="form-group">
+          <label>Airport Booking Expiry Notice</label>
+          <input type="text" name="general-settings-airport-booking-expiry-notice"
+            id="general-settings-airport-booking-expiry-notice" class="form-control form-control-sm"
+            placeholder="in mins" />
+        </div>
+
+        <div class="form-group">
+          <label>Airport Pickup Charges</label>
+          <input type="text" name="general-settings-airport-pickup-charges" id="general-settings-airport-pickup-charges"
+            class="form-control form-control-sm" />
+        </div>
+
+        <div class="form-group">
+          <label>Driver's Commission per Booking</label>
+          <input type="text" name="general-settings-drivers-commission-per-booking"
+            id="general-settings-drivers-commission-per-booking" class="form-control form-control-sm" placeholder="%" />
+        </div>
+
+        <div class="form-group form-check">
+          <label class="form-check-label">
+            <input type="checkbox" name="general-settings-pickup-commission-from-charges" value="false"
+              id="general-settings-pickup-commission-from-charges" class="form-check-input" />
+            Pickup Commission From Charges
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label>Driver Monthly Rent ($)</label>
+          <input type="text" name="general-settings-driver-monthly-rent" id="general-settings-driver-monthly-rent"
+            class="form-control form-control-sm" placeholder="%" />
+        </div>
+
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="form-group form-check">
+              <label class="form-check-label">
+                <input type="checkbox" name="general-settings-pickup-commission-from-charges" value="false"
+                  id="general-settings-pickup-commission-from-charges" class="form-check-input" />
+                Pickup Commission From Charges
+              </label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="text" name="general-settings-pickup-commission-from-charges"
+                id="general-settings-pickup-commission-from-charges" class="form-control form-control-sm"
+                placeholder="after mins" />
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group form-check">
+              <label class="form-check-label">
+                <input type="checkbox" name="general-settings-passenger-text" value="false"
+                  id="general-settings-passenger-text" class="form-check-input" />
+                Enable Passenger Text
+              </label>
+            </div>
+            <div class="form-group form-check">
+              <label class="form-check-label">
+                <input type="checkbox" name="general-settings-onboard-driver" value="false"
+                  id="general-settings-onboard-driver" class="form-check-input" />
+                Enable OnBoard Driver
+              </label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group form-check">
+              <label class="form-check-label">
+                <input type="checkbox" name="general-settings-round-mileage-fares" value="false"
+                  id="general-settings-round-mileage-fares" class="form-check-input" />
+                Round Mileage Fares
+              </label>
+            </div>
+            <div class="form-group form-check">
+              <label class="form-check-label">
+                <input type="checkbox" name="general-settings-booking-quotation" value="false"
+                  id="general-settings-booking-quotation" class="form-check-input" />
+                Enable Booking Quotation
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Credit Card Extra Charges</label>
+          <input type="text" name="general-settings-credit-card-extra-charges"
+            id="general-settings-credit-card-extra-charges" class="form-control form-control-sm" />
+        </div>
+
+        <div class="form-group">
+          <label>Discount for Return Journey</label>
+          <input type="text" name="general-settings-discount-for-return-journey"
+            id="general-settings-discount-for-return-journey" class="form-control form-control-sm" placeholder="%" />
+        </div>
+
+        <div class="form-group">
+          <label>Discount for W/R Journey</label>
+          <input type="text" name="general-settings-discount-for-wr-return-journey"
+            id="general-settings-discount-for-wr-return-journey" class="form-control form-control-sm" placeholder="%" />
+        </div>
+        <!-- FIELDS -->
+      </div>
+      <div class="col-md-6">
+        <!-- FIELDS -->
+        <div class="form-group form-check">
+          <label class="form-check-label">
+            <input type="checkbox" name="general-settings-poi" value="false" id="general-settings-poi"
+              class="form-check-input" />
+            Enable POI
+          </label>
+        </div>
+
+        <div class="form-group form-check">
+          <label class="form-check-label">
+            <input type="checkbox" name="general-settings-special-driver-text" value="false"
+              id="general-settings-special-driver-text" class="form-check-input" />
+            Enable Special Driver Text
+          </label>
+        </div>
+
+        <div class="form-group form-check">
+          <label class="form-check-label">
+            <input type="checkbox" name="general-settings-peak-offpeak-time-fare" value="false"
+              id="general-settings-peak-offpeak-time-fare" class="form-check-input" />
+            Enable Peak OffPeak Time Fare
+          </label>
+        </div>
+
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="form-group form-check">
+              <label class="form-check-label">
+                <input type="checkbox" name="general-settings-start-rate-within" value="false"
+                  id="general-settings-start-rate-within" class="form-check-input" />
+                Apply Start Rate Within
+              </label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="text" name="general-settings-start-rate-within" id="general-settings-start-rate-within"
+                class="form-control form-control-sm" placeholder="mins" />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group form-check">
+          <label class="form-check-label">
+            <input type="checkbox" name="general-settings-show-booking-other-charges" value="false"
+              id="general-settings-show-booking-other-charges" class="form-check-input" />
+            Show Booking Other Charges
+          </label>
+        </div>
+
+        <div class="form-group form-check">
+          <label class="form-check-label">
+            <input type="checkbox" name="general-settings-auto-despatch-job" value="false"
+              id="general-settings-auto-despatch-job" class="form-check-input" />
+            Enable Auto Despatch Job
+          </label>
+        </div>
+
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="form-group form-check">
+              <label class="form-check-label">
+                <input type="checkbox" name="general-settings-bidding" value="false" id="general-settings-bidding"
+                  class="form-check-input" />
+                Enable Bidding
+              </label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="text" name="general-settings-bidding" id="general-settings-bidding"
+                class="form-control form-control-sm" placeholder="radius (in mile)" />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Today's Bidding</label>
+          <select name="general-settings-todays-bidding" class="form-control form-control-sm"
+            id="general-settings-todays-bidding">
+            <option value="...">...</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Recent Bidding</label>
+          <input type="text" name="general-settings-recent-bidding" id="general-settings-recent-bidding"
+            class="form-control form-control-sm" placeholder="in days" />
+        </div>
+
+        <div class="form-group">
+          <label>Page Size</label>
+          <input type="text" name="general-settings-page-size" id="general-settings-page-size"
+            class="form-control form-control-sm" placeholder="in days" />
+        </div>
+
+        <div class="form-group">
+          <label>VIP Booking BgColor</label>
+          <input type="color" name="general-settings-vip-booking-bgcolor" id="general-settings-vip-booking-bgcolor"
+            class="form-control form-control-sm" />
+        </div>
+
+        <div class="form-group form-check">
+          <label class="form-check-label">
+            <input type="checkbox" name="general-settings-web-booking" value="false" id="general-settings-web-booking"
+              class="form-check-input" />
+            Enable Web Booking
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label>Background Color</label>
+          <input type="color" name="general-settings-bgcolor" id="general-settings-bgcolor"
+            class="form-control form-control-sm" />
+        </div>
+        <!-- FIELDS -->
+      </div>
+    </div>
+    <hr />
+    <div class="clearfix">
+      <button type="button" name="general-settings-btn" id="general-settings-btn"
+        class="btn btn-primary float-right">Update</button>
+    </div>
+  </div>
+</section>
+
+<% include ../../partials/footer.ejs %>

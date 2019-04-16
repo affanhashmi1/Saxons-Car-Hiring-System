@@ -3,6 +3,9 @@
 
 <head>
   <title>Saxons | Login</title>
+  <link rel="icon" href="/assets/images/Saxons.ico" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" />
   <link rel="stylesheet" href="/assets/css/font-awesome.min.css" />
   <link rel="stylesheet" href="/assets/css/bootstrap.css" />
   <link rel="stylesheet" href="/assets/css/camera.css" />
@@ -10,22 +13,14 @@
   <link rel="stylesheet" href="/assets/css/main.css" />
   <link rel="stylesheet" href="/assets/css/style.css" />
   <link rel="stylesheet" href="/assets/css/media.css" />
+  <link rel="stylesheet" href="/stylesheets/bootstrap-pulse.min.css" />
   <link rel="stylesheet" href="/stylesheets/style.css" />
-  <link rel="stylesheet" href="https://cdn.muicss.com/mui-0.9.41/css/mui.min.css" />
-  <script src="https://cdn.muicss.com/mui-0.9.41/js/mui.min.js"></script>
   <script src="/assets/js/modernizr-3.5.0.min.js"></script>
 </head>
 
 <body>
 
   <div class="camera_wrap">
-    <div data-src="/assets/images/header2.jpeg">
-      <img src="/assets/images/header2.jpeg">
-      <div class="camera_caption">
-        <p>A jQuery slideshow with many effects, transitions, easy to customize, using canvas and mobile
-          ready, based on jQuery 1.9.1+</p>
-      </div>
-    </div>
     <div data-src="/assets/images/header-bg.jpg">
       <img src="/assets/images/header-bg.jpg" class="img-responsive">
       <div class="camera_caption">
@@ -33,15 +28,22 @@
           ready, based on jQuery 1.9.1+</p>
       </div>
     </div>
-    <div data-src="/assets/images/header1.jpeg">
-      <img src="/assets/images/header1.jpeg">
+    <div data-src="/assets/images/header2.jpg">
+      <img src="/assets/images/header2.jpg">
       <div class="camera_caption">
         <p>A jQuery slideshow with many effects, transitions, easy to customize, using canvas and mobile
           ready, based on jQuery 1.9.1+</p>
       </div>
     </div>
-    <div data-src="/assets/images/header3.jpeg">
-      <img src="/assets/images/header3.jpeg">
+    <div data-src="/assets/images/header1.jpg">
+      <img src="/assets/images/header1.jpg">
+      <div class="camera_caption">
+        <p>A jQuery slideshow with many effects, transitions, easy to customize, using canvas and mobile
+          ready, based on jQuery 1.9.1+</p>
+      </div>
+    </div>
+    <div data-src="/assets/images/header3.jpg">
+      <img src="/assets/images/header3.jpg">
       <div class="camera_caption">
         <p>A jQuery slideshow with many effects, transitions, easy to customize, using canvas and mobile
           ready, based on jQuery 1.9.1+</p>
@@ -50,16 +52,22 @@
   </div>
 
   <form action="portal" method="POST" name="login-form" id="login-form" class="mui-form">
-    <legend>Login to Continue</legend>
-    <div class="mui-textfield mui-textfield--float-label">
-      <input type="email" name="login-email" />
-      <label>Email</label>
+    <div class="card text-center shadow">
+      <div class="card-header">
+        Login to Continue
+      </div>
+      <div class="card-body">
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" name="login-email" id="login-email" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" name="login-password" id="login-password" class="form-control" />
+        </div>
+        <button type="submit" id="login-btn" class="btn btn-primary btn-block">Login</button>
+      </div>
     </div>
-    <div class="mui-textfield mui-textfield--float-label">
-      <input type="password" name="login-password" />
-      <label>Password</label>
-    </div>
-    <button type="submit" class="mui-btn mui-btn--raised" style="background: #5e35b1; color: #ffffff;">Login</button>
   </form>
 
   <script>

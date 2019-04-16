@@ -1,0 +1,226 @@
+<% include ../../partials/header.ejs %>
+<% include ../../partials/nav.ejs %>
+<% include ../../partials/help.ejs %>
+
+<div class="modal fade gallery-modal" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Company Settings Gallery</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul id="modal-gallery" class="list-inline"></ul>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-danger" disabled>Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="my-5">
+  <div class="container">
+    <h3>Company Settings</h3>
+    <hr />
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header">
+            Company Logo
+          </div>
+          <div class="card-body">
+            <img src="/images/upload.png" id="company-settings-img" width="100%" height="200" />
+            <hr>
+            <input type="file" name="company-settings-path" id="company-settings-path" />
+          </div>
+          <div class="card-footer">
+            <div class="clearfix">
+              <button id="company-settings-img-reset" class="btn btn-primary float-right">Reset</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <ul id="img-gallery" class="list-inline"></ul>
+      </div>
+    </div>
+    <!-- JAVASCRIPTS -->
+    <script>
+      function readFile() {
+        if (this.files && this.files[0]) {
+          var rdr = new FileReader();
+          rdr.addEventListener('load', function (e) {
+            document.getElementById('company-settings-img').src = e.target.result;
+            if (localStorage.getItem('gallery') === null) {
+              let imgGalleries = [];
+
+              imgGalleries.push(e.target.result);
+
+              localStorage.setItem('gallery', JSON.stringify(imgGalleries));
+            } else {
+              imgGalleries = JSON.parse(localStorage.getItem('gallery'));
+
+              imgGalleries.push(e.target.result);
+
+              localStorage.setItem('gallery', JSON.stringify(imgGalleries));
+            }
+
+            return e.target.result;
+          });
+          rdr.readAsDataURL(this.files[0]);
+        }
+
+        setGallery();
+      }
+
+      document.getElementById('company-settings-path').addEventListener('change', readFile);
+
+      document.getElementById('company-settings-img-reset').addEventListener('click', function () {
+        document.getElementById('company-settings-img').src = '/images/upload.png';
+        document.getElementById('company-settings-path').value = '';
+      });
+
+      let imgGallery = document.getElementById('img-gallery');
+
+      function setGallery() {
+        imgGallery.innerHTML = ``;
+        let imgGalleries = JSON.parse(localStorage.getItem('gallery'));
+
+        if (imgGalleries.length > 6) {
+          for (let i = (imgGalleries.length - 1); i > (imgGalleries.length - 6); i--) {
+            imgGallery.innerHTML += `<li class="list-inline-item"><img src="${imgGalleries[i]}" class="img-thumbnail" style="width: 200px; height: 200px;" /></li>`;
+          }
+          imgGallery.innerHTML += `<li class="list-inline-item" onclick="showGallery()">${imgGalleries.length - 6}+ more</li>`;
+        } else {
+          for (let i = (imgGalleries.length - 1); i > -1; i--) {
+            imgGallery.innerHTML += `<li class="list-inline-item"><img src="${imgGalleries[i]}" class="img-thumbnail" style="width: 200px; height: 200px;" /></li>`;
+          }
+        }
+      }
+
+      function showGallery() {
+        let imgGalleries = JSON.parse(localStorage.getItem('gallery'));
+
+        for (let i = 0; i < imgGalleries.length; i++) {
+          document.getElementById('modal-gallery').innerHTML += `<li class="list-inline-item"><img onclick="selectImg(this)" src="${imgGalleries[i]}" class="img-thumbnail" style="width: 200px; height: 200px;" /></li>`;
+        }
+        $('.gallery-modal').modal('show');
+      }
+
+      function selectImg(img) {
+        let selectedImage = [];
+
+        if (img.style.opacity == '0.5') {
+          img.style.opacity = '1.0';
+          img.style.background = '#ffffff';
+          $('.btn-danger').attr('disabled', 'disabled');
+        } else {
+          img.style.opacity = '0.5';
+          img.style.background = '#007bff';
+          $('.btn-danger').removeAttr('disabled');
+        }
+      }
+
+      setGallery();
+    </script>
+    <!-- JAVASCRIPTS -->
+    <hr />
+    <div class="row">
+      <div class="col-md-6">
+        <!-- FIELDS -->
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" name="company-settings-name" id="company-settings-name"
+            class="form-control form-control-sm" />
+        </div>
+
+        <div class="form-group">
+          <label>Contact Number</label>
+          <input type="text" name="company-settings-contact-number" id="company-settings-contact-number"
+            class="form-control form-control-sm" />
+        </div>
+
+        <div class="form-group">
+          <label>Emergency Contact Number</label>
+          <input type="text" name="company-settings-emergency-contact-number"
+            id="company-settings-emergency-contact-number" class="form-control form-control-sm" />
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="company-settings-email" id="company-settings-email"
+            class="form-control form-control-sm" />
+        </div>
+
+        <div class="form-group">
+          <label>Fax</label>
+          <input type="text" name="company-settings-fax" id="company-settings-fax"
+            class="form-control form-control-sm" />
+        </div>
+
+        <div class="form-group">
+          <label>Website</label>
+          <input type="url" name="company-settings-website" id="company-settings-website"
+            class="form-control form-control-sm" />
+        </div>
+
+        <div class="form-group">
+          <label>Address</label>
+          <textarea name="company-settings-address" id="company-settings-address" class="form-control form-control-sm"
+            rows="6"></textarea>
+        </div>
+        <!-- FIELDS -->
+      </div>
+      <div class="col-md-6">
+        <!-- FIELDS -->
+        <div class="form-group">
+          <label>Account Title</label>
+          <input type="text" name="company-settings-account-title" id="company-settings-account-title"
+            class="form-control form-control-sm" />
+        </div>
+
+        <div class="form-group">
+          <label>Account Number</label>
+          <input type="text" name="company-settings-account-number" id="company-settings-account-number"
+            class="form-control form-control-sm" />
+        </div>
+
+        <div class="form-group">
+          <label>Bank</label>
+          <input type="text" name="company-settings-bank" id="company-settings-bank"
+            class="form-control form-control-sm" />
+        </div>
+
+        <div class="form-group">
+          <label>Company Number</label>
+          <input type="text" name="company-settings-company-number" id="company-settings-company-number"
+            class="form-control form-control-sm" />
+        </div>
+
+        <div class="form-group">
+          <label>Sort Code</label>
+          <input type="text" name="company-settings-sort-code" id="company-settings-sort-code"
+            class="form-control form-control-sm" />
+        </div>
+
+        <div class="form-group">
+          <label>VAT Number</label>
+          <input type="text" name="company-settings-vat-number" id="company-settings-vat-number"
+            class="form-control form-control-sm" />
+        </div>
+        <!-- FIELDS -->
+      </div>
+    </div>
+    <hr />
+    <div class="clearfix">
+      <button type="button" name="company-settings-btn" id="company-settings-btn"
+        class="btn btn-primary float-right">Update</button>
+    </div>
+  </div>
+</section>
+
+<% include ../../partials/footer.ejs %>

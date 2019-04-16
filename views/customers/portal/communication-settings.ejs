@@ -1,0 +1,110 @@
+<% include ../../partials/header.ejs %>
+<% include ../../partials/nav.ejs %>
+<% include ../../partials/help.ejs %>
+
+<section class="my-5">
+  <div class="container">
+    <h3>Communication Settings</h3>
+    <hr />
+    <div class="card">
+      <div class="card-header">
+        <p class="m-0">Email Configuration</p>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label>Username</label>
+              <input type="email" name="communication-settings-email-configuration-username"
+                id="communication-settings-email-configuration-username" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label>SMTP Host</label>
+              <input type="text" name="communication-settings-email-configuration-smtp-host"
+                id="communication-settings-email-configuration-smtp-host" class="form-control" />
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" name="communication-settings-email-configuration-password"
+                id="communication-settings-email-configuration-password" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label>Port</label>
+              <input type="text" name="communication-settings-email-configuration-port"
+                id="communication-settings-email-configuration-port" class="form-control" />
+            </div>
+          </div>
+          <div class="col-md-4">
+            <br /><br />
+            <div class="form-group form-check">
+              <label class="form-check-label">
+                <input type="checkbox" name="communication-settings-email-configuration-poi" value="false"
+                  id="communication-settings-email-configuration-poi" class="form-check-input" />
+                Check Secure Connection
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="card">
+      <div class="card-header">
+        <p class="m-0">Network Configuration</p>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label>Username</label>
+              <input type="email" name="communication-settings-network-configuration-username"
+                id="communication-settings-network-configuration-username" class="form-control" />
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" name="communication-settings-network-configuration-password"
+                id="communication-settings-network-configuration-password" class="form-control" />
+            </div>
+          </div>
+          <div class="col-md-4"></div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="card">
+      <div class="card-header">
+        <p class="m-0">Mobile Configuration</p>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label>Username</label>
+              <input type="email" name="communication-settings-mobile-configuration-username"
+                id="communication-settings-mobile-configuration-username" class="form-control" />
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" name="communication-settings-mobile-configuration-password"
+                id="communication-settings-mobile-configuration-password" class="form-control" />
+            </div>
+          </div>
+          <div class="col-md-4"></div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="clearfix">
+      <button type="button" name="communication-settings-btn" id="communication-settings-btn"
+        class="btn btn-primary float-right">Update</button>
+    </div>
+  </div>
+</section>
+
+<% include ../../partials/footer.ejs %>
